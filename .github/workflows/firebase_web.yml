@@ -28,4 +28,4 @@ jobs:
       - name: Build & Deploy
         run: |
           yarn build
-          firebase deploy --only hosting --token ${{ SECRETS.CI_FIREBASE_TOKEN }} 
+          firebase deploy --only hosting --token ${{ SECRETS.FIREBASE_TOKEN }} 
