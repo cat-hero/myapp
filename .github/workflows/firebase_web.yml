@@ -5,11 +5,6 @@ on: push
 jobs:
   Build_Deploy_Web:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x]
-
     env:
       CI_FIREBASE_MESSAGE: ${{ github.event.head_commit.message }} - ${{ github.event.head_commit.url }}/checks
 
