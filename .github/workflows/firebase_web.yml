@@ -12,16 +12,11 @@ jobs:
       ## Checkout current branch
       - uses: actions/checkout@v1
 
-      ## Setup node
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
       ## Install dependencies
       - name: yarn install
         run: |
-          yarn
+          yarn ci
+      - uses: FirebaseExtended/action-hosting-deploy@v0
       ## Build & Deploy
       - name: Build & Deploy
         run: |
